@@ -1,15 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portafolio - Gabriel Rojas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: sans-serif;
+        }
+        section {
+            padding: 2rem 0;
+        }
+    </style>
 </head>
 <body>
-    <p>
-        Portfolio
 
-    </p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gabriel Rojas</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <section id="inicio" class="bg-light text-center py-5">
+        <div class="container">
+            <h1>Gabriel Rojas</h1>
+            <h2>Estudiante de Bioinformática</h2>
+            <p>Apasionado por la biología y la programación para el avance en investigación y aplicaciones.</p>
+        </div>
+    </section>
+
+    <section id="educacion" class="container">
+        <h2>Educación</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Escuela de Ingeniería Civil en Bioinformática</h5>
+                <p class="card-text">Universidad de Talca (2018-Actualidad)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades" class="container">
+        <h2>Habilidades</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Profesionales</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>Django</li>
+                    <li>PostgreSQL</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Tecnologías</h3>
+                <ul>
+                    <li>OpenAI</li>
+                    <li>Google Gemini</li>
+                    <li>Stable Diffusion</li>
+                    <li>Google Colab</li>
+                    <li>Kaggle</li>
+                    <li>NCBI</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="container">
+        <h2>Proyectos Personales</h2>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Preanálisis de datos psicológicos</h5>
+                <p class="card-text">Análisis con Python utilizando Google Colab.</p>
+                <a href="#" class="btn btn-primary">Ver proyecto</a> </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Asociación de Fármacos - Target</h5>
+                <p class="card-text">Desarrollo web con Django, PostgreSQL y DrugBank.</p>
+                <a href="#" class="btn btn-primary">Ver proyecto</a> </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Investigación de genes junto a GPT-3</h5>
+                <p class="card-text">Software para recomendación de genes usando GPT-3 y NCBI.</p>
+                <a href="#" class="btn btn-primary">Ver proyecto</a> </div>
+        </div>
+
+    </section>
+
+    <section id="contacto" class="container bg-light py-5">
+        <h2>Contacto</h2>
+        <p>Correo: grojas18@alumnos.utalca.cl</p>
+        <p>Teléfono: +569 4179 6259</p>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
