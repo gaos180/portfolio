@@ -6,3 +6,14 @@ body {
 section {
     padding: 2rem 0;
 }
+.btn-primary {
+    background-color: rgb(161, 36, 199) !important;
+    border-color: rgb(161, 36, 199) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: rgb(140, 30, 173) !important; /* Un tono más oscuro para hover */
+    border-color: rgb(140, 30, 173) !important;
+}

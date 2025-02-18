@@ -6,8 +6,8 @@ Source: https://codepen.io/ysosu/pen/vYLvaqX
 :root {
     --rotate-time: 4s;
     --rotate-delay: 0.15s;
-    --lines-color: rgba(255, 255, 255, 0.1);
-    --dots-color: white;
+    --lines-color: rgba(255, 255, 255, 0.151);
+    --dots-color: rgb(161, 36, 199);
   }
   
   body {
