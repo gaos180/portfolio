@@ -3,291 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Rojas · Bioinformática</title>
-    <meta name="description" content="Portafolio de Gabriel Rojas — Ingeniería Civil en Bioinformática. Proyectos de análisis de datos biológicos, grafos de interacción fármaco-diana y aplicaciones de IA en genómica.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-
+    
+    <title>Portafolio - Gabriel Rojas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main_page.css">
+    
+    <!-- Logotipo -->
     <link rel="shortcut icon" href="imgs/dnaLogotype.png">
+
+    <!-- Oculta el contenido inicialmente -->
+    <style>
+        #content {
+          display: none; /* Ocultar el contenido inicialmente */
+        }
+        #animation {
+            position: absolute;
+            top: 50%;
+            height: 240px;
+            left: 50%;
+            width: 800px;
+            margin-top: -120px;
+            margin-left: -400px;
+            perspective: 1000px;
+        }
+        #cyto {
+        height: 600px; /* Or adjust as needed */
+        width: 100%;
+        background-color: #eee; /* Light background for the graph area */
+        }
+        .layout-buttons { /* Style for the layout button group */
+            margin-top: 20px;
+        }
+      </style>
 </head>
 <body>
 
-    <!-- ============ Preloader: hélice de ADN ============ -->
-    <div id="preloader">
-        <iframe src="dna.html" title="Animación de ADN"></iframe>
+    <div id="animation">
+        <!-- Animacion DNA -->
+        <iframe src="dna.html" style="width: 800px; height: 240px; border: none;"></iframe>
+    
     </div>
 
-    <!-- ============ Navbar ============ -->
-    <nav class="site-nav">
+    <!-- Contenido de la página -->
+    <div id="content">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="brand" href="#top">
-                <img src="imgs/dnaLogotype.png" alt="Logo ADN">
-                Gabriel<span>::Rojas</span>
-            </a>
-            <button class="nav-toggle" aria-label="Abrir menú" onclick="document.getElementById('navLinks').classList.toggle('open')">≡</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#sobre-mi">// sobre-mí</a></li>
-                <li><a href="#educacion">// educación</a></li>
-                <li><a href="#habilidades">// habilidades</a></li>
-                <li><a href="#proyectos">// proyectos</a></li>
-                <li><a href="#contacto">// contacto</a></li>
-            </ul>
+            <a class="navbar-brand" href="#">Gabriel Rojas</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- ============ Hero ============ -->
-    <header class="hero" id="top">
-        <iframe class="hero-dna" src="dna.html" title="Hélice de ADN decorativa" aria-hidden="true"></iframe>
+    <section id="inicio" class="text-center py-5">
         <div class="container">
-            <div class="hero-inner">
-                <span class="eyebrow">Ingeniería Civil en Bioinformática</span>
-                <h1>Gabriel <span class="grad">Rojas</span></h1>
-                <p class="role"><span id="typed"></span><span class="cursor"></span></p>
-                <p class="lead">
-                    Uniendo biología y computación para transformar datos genómicos y
-                    farmacológicos en conocimiento. Me apasiona construir herramientas que
-                    aceleren la investigación científica.
-                </p>
-                <div class="hero-cta">
-                    <a class="btn btn-primary" href="#proyectos">Ver proyectos ↓</a>
-                    <a class="btn btn-ghost" href="https://github.com/gaos180" target="_blank" rel="noopener">GitHub ↗</a>
-                </div>
-            </div>
+            <h1>Gabriel Rojas</h1>
+            <h2>Estudiante de Bioinformática</h2>
+            <p>Apasionado por la biología y la programación para el avance en investigación y aplicaciones.</p>
         </div>
-    </header>
+    </section>
 
-    <!-- ============ Sobre mí ============ -->
-    <section class="section" id="sobre-mi">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="idx">01 —</span>
-                <h2>Sobre mí</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p>
-                        Soy estudiante de <strong>Ingeniería Civil en Bioinformática</strong> en la
-                        Universidad de Talca, un campo donde convergen la biología molecular, la
-                        estadística y el desarrollo de software.
-                    </p>
-                    <p>
-                        Trabajo con <strong>Python</strong> y <strong>C++</strong> para el análisis
-                        de datos biológicos, construyo aplicaciones web con <strong>Django</strong> y
-                        <strong>PostgreSQL</strong>, y exploro activamente el uso de
-                        <strong>modelos de IA</strong> aplicados a la genómica y el descubrimiento de fármacos.
-                    </p>
-                    <p>
-                        Me interesan especialmente las redes de interacción biológica, la minería de
-                        bases de datos como <strong>NCBI</strong> y <strong>DrugBank</strong>, y todo
-                        lo que permita convertir grandes volúmenes de datos en hipótesis accionables.
-                    </p>
-                </div>
-                <div class="stat-card reveal">
-                    <div class="row"><span class="k">rol</span><span class="v">Bioinformático</span></div>
-                    <div class="row"><span class="k">institución</span><span class="v">U. de Talca</span></div>
-                    <div class="row"><span class="k">enfoque</span><span class="v">Datos + Biología</span></div>
-                    <div class="row"><span class="k">lenguajes</span><span class="v">Python · C++</span></div>
-                    <div class="row"><span class="k">ubicación</span><span class="v">Chile 🇨🇱</span></div>
-                    <div class="row"><span class="k">estado</span><span class="v">Disponible</span></div>
-                </div>
+    <section id="educacion" class="container">
+        <h2>Educación</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Escuela de Ingeniería Civil en Bioinformática</h5>
+                <p class="card-text">Universidad de Talca (2018-Actualidad)</p>
             </div>
         </div>
     </section>
 
-    <!-- ============ Educación ============ -->
-    <section class="section section-alt" id="educacion">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="idx">02 —</span>
-                <h2>Educación</h2>
+    <section id="habilidades" class="container">
+        <h2>Habilidades</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Profesionales</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>Django</li>
+                    <li>PostgreSQL</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                </ul>
             </div>
-            <div class="timeline">
-                <div class="tl-item reveal">
-                    <span class="when">2018 — Actualidad</span>
-                    <h3>Ingeniería Civil en Bioinformática</h3>
-                    <p>
-                        Universidad de Talca. Formación en biología molecular, algoritmos,
-                        estadística, bases de datos y desarrollo de software aplicado a las
-                        ciencias de la vida.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ Habilidades ============ -->
-    <section class="section" id="habilidades">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="idx">03 —</span>
-                <h2>Habilidades &amp; Stack</h2>
-                <p>Herramientas que uso para pasar del dato crudo al resultado biológico.</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-block reveal">
-                    <h3>▹ Programación</h3>
-                    <div class="chips">
-                        <span class="chip">Python</span>
-                        <span class="chip">C++</span>
-                        <span class="chip">Django</span>
-                        <span class="chip">PostgreSQL</span>
-                        <span class="chip">HTML</span>
-                        <span class="chip">CSS</span>
-                        <span class="chip">Bootstrap</span>
-                    </div>
-                </div>
-                <div class="skill-block reveal">
-                    <h3>▹ IA &amp; Modelos</h3>
-                    <div class="chips">
-                        <span class="chip">OpenAI</span>
-                        <span class="chip">Google Gemini</span>
-                        <span class="chip">Stable Diffusion</span>
-                        <span class="chip">GPT-3</span>
-                    </div>
-                </div>
-                <div class="skill-block reveal">
-                    <h3>▹ Plataformas &amp; Datos</h3>
-                    <div class="chips">
-                        <span class="chip">Google Colab</span>
-                        <span class="chip">Kaggle</span>
-                        <span class="chip">NCBI</span>
-                        <span class="chip">DrugBank</span>
-                        <span class="chip">Cytoscape</span>
-                    </div>
-                </div>
+            <div class="col-md-6">
+                <h3>Tecnologías</h3>
+                <ul>
+                    <li>OpenAI</li>
+                    <li>Google Gemini</li>
+                    <li>Stable Diffusion</li>
+                    <li>Google Colab</li>
+                    <li>Kaggle</li>
+                    <li>NCBI</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- ============ Proyectos ============ -->
-    <section class="section section-alt" id="proyectos">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="idx">04 —</span>
-                <h2>Proyectos</h2>
-                <p>Una selección de trabajos en análisis de datos, redes biológicas e IA.</p>
-            </div>
+    <section id="proyectos" class="container">
+        <h2>Proyectos Personales</h2>
 
-            <div class="projects">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Preanálisis de datos psicológicos</h5>
+                <p class="card-text">Análisis con Python utilizando Google Colab.</p>
+                <a href="#" class="btn btn-primary">Ver proyecto</a> </div>
+        </div>
+        
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Asociación de Fármacos - Druggraph</h5>
+                <p class="card-text">Desarrollo web con Django, PostgreSQL y DrugBank.</p>
 
-                <!-- Proyecto destacado: Druggraph -->
-                <article class="project project-featured reveal">
-                    <div class="project-head">
-                        <h3>Druggraph — Red de interacción fármaco-diana</h3>
-                        <span class="tag">★ Destacado · Interactivo</span>
-                    </div>
-                    <p class="desc">
-                        Aplicación web que visualiza interacciones entre fármacos y sus dianas
-                        moleculares a partir de datos de DrugBank. El grafo es interactivo:
-                        cambia el algoritmo de disposición y descarga la visualización como imagen.
-                    </p>
-                    <div class="stack">
-                        <span>Django</span><span>PostgreSQL</span><span>DrugBank</span>
-                        <span>Cytoscape.js</span><span>Python</span>
-                    </div>
-
-                    <div class="graph-toolbar">
-                        <div class="layout-group" role="group" aria-label="Selección de disposición">
-                            <input type="radio" name="layout" id="btn-cose" checked>
-                            <label for="btn-cose">cose</label>
-                            <input type="radio" name="layout" id="btn-concentric">
-                            <label for="btn-concentric">concentric</label>
-                            <input type="radio" name="layout" id="btn-circle">
-                            <label for="btn-circle">circle</label>
-                            <input type="radio" name="layout" id="btn-breadthfirst">
-                            <label for="btn-breadthfirst">breadthfirst</label>
-                        </div>
-                        <button id="downloadBtn" class="btn btn-ghost btn-sm">⤓ Descargar PNG</button>
-                    </div>
-
-                    <div id="cyto"></div>
-
-                    <div class="graph-legend">
-                        <span><span class="dot" style="background:red"></span>inhibitor</span>
-                        <span><span class="dot" style="background:green"></span>inducer</span>
-                        <span><span class="dot" style="background:blue"></span>modulator</span>
-                        <span><span class="dot" style="background:orange"></span>binder</span>
-                        <span><span class="dot" style="background:purple"></span>activator</span>
-                        <span><span class="dot" style="background:brown"></span>downregulator</span>
-                    </div>
-                </article>
-
-                <!-- ============================================================
-                     Proyectos ocultos temporalmente. Para volver a mostrarlos,
-                     descomenta el bloque que corresponda.
-                     ============================================================ -->
-                <!--
-                <article class="project reveal">
-                    <div class="project-head">
-                        <h3>Recomendación de genes con IA</h3>
-                        <span class="tag">IA · Genómica</span>
-                    </div>
-                    <p class="desc">
-                        Software que combina modelos de lenguaje (GPT-3) con la base de datos
-                        de NCBI para sugerir genes relevantes en un contexto de investigación,
-                        acelerando la etapa de exploración de hipótesis.
-                    </p>
-                    <div class="stack">
-                        <span>Python</span><span>GPT-3 / OpenAI</span><span>NCBI</span>
-                    </div>
-                </article>
-
-                <article class="project reveal">
-                    <div class="project-head">
-                        <h3>Preanálisis de datos psicológicos</h3>
-                        <span class="tag">Data Science</span>
-                    </div>
-                    <p class="desc">
-                        Limpieza, exploración y análisis estadístico de un conjunto de datos
-                        psicológicos usando Python en Google Colab, como base para modelado posterior.
-                    </p>
-                    <div class="stack">
-                        <span>Python</span><span>Pandas</span><span>Google Colab</span>
-                    </div>
-                </article>
-                -->
-
+                <div class="btn-group" role="group" aria-label="Layout selection">
+                    <input type="radio" class="btn-check" name="layout" id="btn-cose" autocomplete="off" checked>
+                    <label class="btn btn-outline-warning" for="btn-cose">Cose</label>
+                
+                    <input type="radio" class="btn-check" name="layout" id="btn-concentric" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="btn-concentric">Concentric</label>
+                
+                    <input type="radio" class="btn-check" name="layout" id="btn-circle" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="btn-circle">Circle</label>
+                
+                    <input type="radio" class="btn-check" name="layout" id="btn-breadthfirst" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="btn-breadthfirst">Breadthfirst</label>
+                </div>
+                
+                  <button id="downloadBtn" style="margin: 10px;" class="btn btn-sm btn-primary">Descargar imagen</button>
+                <div id="cyto"></div>  
+                <script src="./js/cytoscapeGraph.js"></script> 
             </div>
         </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Investigación de genes junto a GPT-3</h5>
+                <p class="card-text">Software para recomendación de genes usando GPT-3 y NCBI.</p>
+                <a href="#" class="btn btn-primary">Ver proyecto</a> </div>
+        </div>
+
     </section>
 
-    <!-- ============ Contacto ============ -->
-    <section class="section" id="contacto">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="idx">05 —</span>
-                <h2>Contacto</h2>
-                <p>¿Colaboramos? Escríbeme por cualquiera de estos medios.</p>
-            </div>
-            <div class="contact-grid">
-                <a class="contact-card reveal" href="mailto:grojas18@alumnos.utalca.cl">
-                    <div class="label">Correo</div>
-                    <div class="value">grojas18@alumnos.utalca.cl</div>
-                </a>
-                <a class="contact-card reveal" href="tel:+56941796259">
-                    <div class="label">Teléfono</div>
-                    <div class="value">+56 9 4179 6259</div>
-                </a>
-                <a class="contact-card reveal" href="https://github.com/gaos180" target="_blank" rel="noopener">
-                    <div class="label">GitHub</div>
-                    <div class="value">github.com/gaos180</div>
-                </a>
-            </div>
-        </div>
+    <section id="contacto" class="container bg-light py-5">
+        <h2>Contacto</h2>
+        <p>Correo: grojas18@alumnos.utalca.cl</p>
+        <p>Teléfono: +569 4179 6259</p>
     </section>
 
-    <footer class="site-footer">
-        <div class="container">
-            &lt;/&gt; Diseñado y desarrollado por Gabriel Rojas · Bioinformática · 2026
-        </div>
-    </footer>
+</div>
 
-    <!-- ============ Scripts ============ -->
+
     <script src="https://unpkg.com/cytoscape@3.21.0/dist/cytoscape.min.js"></script>
-    <script src="./js/cytoscapeGraph.js"></script>
-    <script src="./js/main.js"></script>
+
+    <script>
+        window.addEventListener('load', function() {
+        setTimeout(function() { // Esperar 2 segundos antes de ejecutar la animación
+                document.getElementById('content').style.display = 'block';
+                const contenido = document.getElementById('content');
+                contenido.animate([
+                { opacity: 0 },
+                { opacity: 1 }
+                ], {
+                duration: 1000,
+                easing: 'ease-in-out'
+                });
+
+                document.getElementById('animation').style.display = 'none';
+            }, 1500); // 2000 milisegundos = 2 segundos
+            
+        });
+
+      </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -89,37 +89,25 @@ Acetylsalicylic acid	Sialidase-1	inhibitor
                     style: {
                         'background-fit': 'contain',
                         'background-image': 'url("./imgs/pill.webp")',
-                        'background-color': '#c264ff',
+                        'background-color': '#a124c7',
                         'label': 'data(label)',
-                        'color': '#e6f1ff',
-                        'font-size': 13,
-                        'font-family': 'JetBrains Mono, monospace',
-                        'text-valign': 'bottom',
-                        'text-margin-y': 4,
-                        'text-outline-color': '#05080d',
-                        'text-outline-width': 2,
-                        'width': 64,
-                        'height': 64
+                        'text-outline-color': '#a124c7',
+                        'text-outline-width': 1,
+                        'width': 200,
+                        'height': 200
                     }
                 },
                 {
                     selector: 'node[type="target"]',
                     style: {
                         'background-fit': 'contain',
-                        'background-image': 'url("./imgs/target.webp")',
-                        'background-color': '#2fe6a7',
+                        'background-image': 'url("./imgs/target.webp")', 
+                        'background-color': '#ffa800',
                         'label': 'data(label)',
-                        'color': '#8fa6bd',
-                        'font-size': 11,
-                        'font-family': 'JetBrains Mono, monospace',
-                        'text-valign': 'bottom',
-                        'text-margin-y': 3,
-                        'text-outline-color': '#05080d',
-                        'text-outline-width': 2,
-                        'text-max-width': 120,
-                        'text-wrap': 'ellipsis',
-                        'width': 46,
-                        'height': 46
+                        'text-outline-color': '#ffa800',
+                        'text-outline-width': 1,
+                        'width': 200,
+                        'height': 200
                     }
                 },
                 {
@@ -127,9 +115,6 @@ Acetylsalicylic acid	Sialidase-1	inhibitor
                     style: {
                         'width': 2,
                         'label': 'data(label)',
-                        'font-size': 9,
-                        'color': '#5c7086',
-                        'text-rotation': 'autorotate',
                         'line-color': function (ele) {
                             return colorMap[ele.data('type')] || '#ccc';
                         },
@@ -138,7 +123,7 @@ Acetylsalicylic acid	Sialidase-1	inhibitor
                         },
                         'curve-style': 'bezier',
                         'target-arrow-shape': 'triangle',
-                        'opacity': 0.85,
+                        'source-arrow-shape': 'triangle',
                     }
                 }
             ],
